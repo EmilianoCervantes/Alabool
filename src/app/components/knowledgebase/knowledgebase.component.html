@@ -1,0 +1,28 @@
+<!-- Breadcrumb -->
+<ul class="breadcrumb">
+  <div class="container-fluid">
+    <li class="breadcrumb-item"><a routerLink="/dashboard">Inicio</a></li>
+    <li class="breadcrumb-item active">Base de conocimientos</li>
+  </div>
+</ul>
+<!-- Knowledge container -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+
+      <!-- Tickets buttons -->
+      <div class="row">
+        <a class="col-3 btn btn-ticket" id="todos">Todos<br><span class="number"><strong>10</strong></span></a>
+        <a class="col-3 btn btn-ticket" id="erp">ERP<br><span class="number"><strong>5</strong></span></a>
+        <a class="col-3 btn btn-ticket" id="crm">CRM<br><span class="number"><strong>3</strong></span></a>
+        <a class="col-3 btn btn-ticket" id="bi">BI<br><span class="number"><strong>2</strong></span></a>
+      </div>
+      <!-- Tables -->
+      <app-knowledge-list></app-knowledge-list>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <!-- Deatil list -->
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

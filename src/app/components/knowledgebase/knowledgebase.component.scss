@@ -1,0 +1,53 @@
+.btn-ticket{
+    
+    margin-top: 10px;
+    padding: 18px;
+    font-size: 1.15rem;
+    
+    &#todos{
+        background-color: #40BCAC;
+        border-color: #40BCAC;
+        
+        &:hover, &:focus, &:active, &.active{
+            background-color: #1dad9a;
+            border-color: #1dad9a;
+        }
+    }
+    &#erp{
+        background-color: #ED855B;
+        border-color: #ED855B;
+        
+        &:hover, &:focus, &:active, &.active{
+            background-color: #d36c43;
+            border-color: #d36c43;
+        }
+    }
+    &#crm{
+        background-color: #f2467c;
+        border-color: #f2467c;
+        
+        &:hover, &:focus, &:active, &.active{
+            background-color: #d63565;
+            border-color: #d63565;
+        }
+    }
+    &#bi{
+        background-color: #1BACC0;
+        border-color: #1BACC0;
+        
+        &:hover, &:focus, &:active, &.active{
+            background-color: #1e98a8;
+            border-color: #1e98a8;
+        }
+    }
+}
+
+a{
+    color: #fff !important;
+    cursor: pointer;
+}
+
+.breadcrumb-item a {
+  color: #1D93EB !important;
+  text-decoration: none;
+}

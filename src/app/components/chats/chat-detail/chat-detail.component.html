@@ -1,0 +1,36 @@
+<div class="detail-chat">
+    <div class="row">
+        <div class="col-12">
+            <div class="card card-ticket">
+                <div class="card-header d-flex align-items-center">
+                    <h3 class="h4">Chat #{{chat.id}}</h3>
+                    <!-- Dropdown button -->
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Acciones
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" (click)="onDisplayGraficas()">Gráficas</a>
+                            <a class="dropdown-item">Marcar</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item">Eliminar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <ol class="chat">
+                        <div *ngFor="let message of chat.messages_and_events">
+                            <li class="{{message.type}}">
+                                <div class="triangle"></div>
+                                <div class="msg">
+                                    <p>{{message.body}}</p>
+                                    <p><small>{{message.display_name}}</small>&nbsp;&nbsp;&nbsp;<time>{{message.sent_at_time}}</time></p>
+                                </div>
+                            </li>
+                        </div>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

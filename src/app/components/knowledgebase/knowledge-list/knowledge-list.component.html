@@ -1,0 +1,22 @@
+<section class="tables">
+    <div class="card card-ticket">
+        <div class="card-header d-flex align-items-center">
+            <h3 class="h4">Base de conocimiento</h3>
+        </div>
+        <div class="card-body">
+            <table class="table table-striped table-hover">
+                <thead class="thead-inverse">
+                    <tr>
+                        <th>Título</th>
+                        <th>Productos</th>
+                    </tr>
+                </thead>
+                <!-- knowledges iteration-->
+                <tr *ngFor="let knowledge of knowledges" [routerLink]="knowledge.id" routerLinkActive="bg-info">
+                    <td>{{knowledge.title}}</td>
+                    <td>ERP</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,58 @@
+{
+  "db": {
+    "host": "localhost",
+    "port": 27017,
+    "url": "",
+    "database": "alaboolApp",
+    "password": "test",
+    "name": "db",
+    "user": "admin",
+    "connector": "mongodb"
+  },
+  "ChatUserlike": {
+    "name": "ChatUserlike",
+    "baseURL": "https://www.userlike.com/api/external/message/chat_meta/",
+    "crud": false,
+    "connector": "rest",
+    "operations": [
+      {
+        "functions": {
+          "Online": []
+        },
+        "template": {
+          "method": "GET",
+          "url": "https://www.userlike.com/api/external/message/chat_meta/?count=15",
+          "headers": {
+            "accepts": "application/json",
+            "content-type": "application/json",
+            "Authorization": "8c149a3d-4acf-362e-880c-30ec2f5ecaf7"
+          },
+          "responsePath": "$.*"
+        }
+      }
+    ]
+  },
+  "OperadorUserlike": {
+    "name": "OperadorUserlike",
+    "baseURL": "https://www.userlike.com/api/external/operator/",
+    "crud": false,
+    "connector": "rest",
+    "operations": [
+      {
+        "functions": {
+          "Configuration": []
+        },
+        "template": {
+          "method": "GET",
+          "url": "https://www.userlike.com/api/external/operator/",
+          "headers": {
+            "accepts": "application/json",
+            "content-type": "application/json",
+            "Authorization": "8c149a3d-4acf-362e-880c-30ec2f5ecaf7"
+          },
+          "responsePath": "$.*"
+        }
+      }
+    ]
+  }
+}

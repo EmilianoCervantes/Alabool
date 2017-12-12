@@ -1,0 +1,32 @@
+<!-- Breadcrumb -->
+<ul class="breadcrumb">
+  <div class="container-fluid">
+    <li class="breadcrumb-item"><a routerLink="/dashboard">Inicio</a></li>
+    <li class="breadcrumb-item active">Chats</li>
+  </div>
+</ul>
+<!-- Chats container -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+
+            <!-- Tickets buttons -->
+            <div class="row">
+                <a class="col-4 btn btn-ticket" id="todos">Todos<br><span class="number"><strong>2</strong></span></a>
+                <a class="col-4 btn btn-ticket" id="convertidos">Convertidos<br><span class="number"><strong>2</strong></span></a>
+                <a class="col-4 btn btn-ticket" id="resueltos">Resueltos<br><span class="number"><strong>296</strong></span></a>
+            </div>
+            <!-- Tables -->
+            <app-chat-list></app-chat-list>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <!-- Deatil list -->
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
+
+
+
+
+

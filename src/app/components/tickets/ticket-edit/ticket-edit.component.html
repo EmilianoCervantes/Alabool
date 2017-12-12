@@ -1,0 +1,135 @@
+<div class="create-ticket">
+    <div class="row">
+        <div class="col-12">
+            <div class="card card-ticket">
+                <div class="card-header d-flex align-items-center">
+                    <h3 class="h4">Editar</h3>
+                    <!-- Dropdown button -->
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Acciones
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" (click)="onViewTicket()">Ver</a>
+                            <a class="dropdown-item" (click)="onAddComment()">Comentar</a>
+                            <a class="dropdown-item">Marcar</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" (click)="onDeleteTicket()">Eliminar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <form [formGroup]="ticketForm" (ngSubmit)="onSubmit()">
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label col-form-label-sm">Título</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control form-control-sm" placeholder="Tema a tratar" formControlName="title">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label col-form-label-sm">Detalle</label>
+                            <div class="col-sm-9">
+                                <textarea class="form-control form-control-sm" rows="3" id="detail" formControlName="description"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label col-form-label-sm">Estatus</label>
+                            <div class="col-sm-9">
+                                <select class="form-control form-control-sm" id="sel1" formControlName="status">
+                                    <option>Nuevo</option>
+                                    <option>Pendiente</option>
+                                    <option>Cerrdado</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label col-form-label-sm">Prioridad</label>
+                            <div class="col-sm-9">
+                                <select class="form-control form-control-sm" id="sel1" formControlName="priority">
+                                    <option>Baja</option>
+                                    <option>Medio</option>
+                                    <option>Alta</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label col-form-label-sm">Productos</label>
+                            <div class="col-sm-9">
+                                <div class="form-check form-check-inline">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="checkbox" id="ERP" value="option1"> ERP
+                                    </label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="checkbox" id="CRM" value="option2"> CRM
+                                    </label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="checkbox" id="BI" value="option2"> BI
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label col-form-label-sm">Empresa</label>
+                            <div class="col-sm-9">
+                                <select class="form-control form-control-sm" id="sel1" formControlName="company">
+                                    <option>Rolcar</option>
+                                    <option>Psicofarma</option>
+                                    <option>Rexfarma</option>
+                                    <option>Alabrados</option>
+                                    <option>HiTec</option>
+                                    <option>Remedios Mágicos</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label col-form-label-sm">Sucursal</label>
+                            <div class="col-sm-9">
+                                <select class="form-control form-control-sm" id="sel1" formControlName="branch">
+                                    <option>Tijuana</option>
+                                    <option>Monterrey</option>
+                                    <option>Guadalajara</option>
+                                    <option>CDMX</option>
+                                    <option>Chiapas</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label col-form-label-sm">Cliente</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control form-control-sm" placeholder="Nombre del cliente" formControlName="client_name">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label col-form-label-sm">Correo</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control form-control-sm" placeholder="Correo electrónico del cliente" formControlName="client_email">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label col-form-label-sm">Teléfono</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control form-control-sm" placeholder="Teléfono del cliente" formControlName="client_phone">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label col-form-label-sm">Asignado a</label>
+                            <div class="col-sm-9">
+                                <select class="form-control form-control-sm" id="sel1" formControlName="responsable_name">
+                                    <option>Geovanni Arrieta</option>
+                                    <option>Jimena Cortés</option>
+                                    <option>Miguel Zavala</option>
+                                    <option>Carlos Gil</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-success btn-lg btn-block" [disabled]="!ticketForm.valid">Crear</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

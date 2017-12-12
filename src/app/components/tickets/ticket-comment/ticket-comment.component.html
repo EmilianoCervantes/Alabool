@@ -1,0 +1,37 @@
+<div class="create-ticket">
+    <div class="row">
+        <div class="col-12">
+            <div class="card card-ticket">
+                <div class="card-header d-flex align-items-center">
+                    <h3 class="h4">Agregar comentario</h3>
+                    <!-- Dropdown button -->
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Acciones
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" (click)="onViewTicket()">Ver</a>
+                            <a class="dropdown-item" (click)="onEditTicket()">Editar</a>
+                            <a class="dropdown-item">Marcar</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" (click)="onDeleteTicket()">Eliminar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <form [formGroup]="commentForm" (ngSubmit)="onSubmit()">
+                        <div class="form-group row">
+                            <div class="col-sm-12">
+                                <textarea class="form-control form-control-sm" rows="6" id="comment" formControlName="message"></textarea>
+                            </div>
+                        </div>
+                        <div class="file-loading">
+                            <input id="input-20" type="file">
+                        </div>
+                        <button type="submit" class="btn btn-success btn-lg btn-block" [disabled]="!commentForm.valid">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

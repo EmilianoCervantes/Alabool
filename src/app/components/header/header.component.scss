@@ -1,0 +1,28 @@
+nav{
+    padding: 25px;
+}
+
+a{
+    color: #fff !important;
+    padding-right: 1rem !important;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.5;
+
+    &.navbar-brand{
+        font-size: 1.4rem;
+    }
+}
+
+.show ul{
+    border-top: 1px solid #fff !important;
+}
+
+.navbar-light .navbar-toggler{
+    background: #fff; 
+}
+
+.active-li{
+    border-bottom: 2px solid #fff !important;
+}

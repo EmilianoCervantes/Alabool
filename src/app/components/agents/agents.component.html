@@ -1,0 +1,25 @@
+<!-- Breadcrumb -->
+<ul class="breadcrumb">
+  <div class="container-fluid">
+    <li class="breadcrumb-item"><a routerLink="/dashboard">Inicio</a></li>
+    <li class="breadcrumb-item active">Agentes</li>
+  </div>
+</ul>
+<!-- Agents container -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <!-- Tables -->
+            <app-agent-list></app-agent-list>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <!-- Deatil list -->
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
+
+
+
+
+

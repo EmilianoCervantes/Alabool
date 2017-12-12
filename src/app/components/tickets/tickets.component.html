@@ -1,0 +1,28 @@
+<!-- Breadcrumb -->
+<ul class="breadcrumb">
+  <div class="container-fluid">
+    <li class="breadcrumb-item"><a routerLink="/dashboard">Inicio</a></li>
+    <li class="breadcrumb-item active">Tickets</li>
+  </div>
+</ul>
+<!-- Ticket container -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+
+      <!-- Tickets buttons -->
+      <div class="row">
+        <a class="col-3 btn btn-danger btn-ticket" (click)="getNew()">Nuevos<br><span class="number"><strong>2</strong></span></a>
+        <a class="col-3 btn btn-warning btn-ticket">Pendientes<br><span class="number"><strong>2</strong></span></a>
+        <a class="col-3 btn btn-success btn-ticket">Resueltos<br><span class="number"><strong>296</strong></span></a>
+        <a class="col-3 btn btn-info btn-ticket">Todos<br><span class="number"><strong>300</strong></span></a>
+      </div>
+      <!-- Tables -->
+      <app-ticket-list></app-ticket-list>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <!-- Deatil list -->
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

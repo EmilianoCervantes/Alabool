@@ -1,0 +1,98 @@
+.detail-ticket{
+  margin-top: 15px;
+
+  .btn-group{
+    position: absolute;
+    right: 5px;
+  }
+}
+
+a{
+  cursor: pointer;
+}
+
+.card-body{
+  p, span, div{
+    color: #888;
+    font-family: "Poppins", sans-serif;
+    font-size: .9rem;
+    line-height: 1.1;
+    text-align: center;
+  }
+
+  .text-min{
+    line-height: .5;
+  }
+
+  .title{
+    color: #3ACEE7;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: -10px;
+  }
+
+  .text-left{
+    margin-left: 25px;
+  }
+
+  .description{
+    line-height: 1.5;
+    margin-top: 15px;
+  }
+
+  .author{
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 5px 25px;
+    text-align: left;
+  }
+
+  .file{
+    text-align: left;
+    line-height: 1.6;
+
+    .img{
+      width:24px;
+      height:24px;
+      background-image:url('../../../../assets/icons/attach_file_18.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      opacity: .6;
+      vertical-align: text-bottom;
+    }
+  }
+
+  .text-text{
+    display: inline-flex;
+  }
+
+  .back{
+    color: #FFF;
+    padding: 5px;
+    font-size: .8rem;
+    font-weight: 700;
+    margin: 0px 2px;
+    padding: 4px 15px;
+    border-radius: 10px;
+
+    &.abierto, &.alta{
+      background-color: #D75453;
+    }
+
+    &.pendiente, &.medio{
+      background-color: #EFAC57;
+    }
+
+    &.cerrado, &.baja, &.ERP{
+      background-color: #60B660;
+    }
+
+    .CRM{
+      background-color: #60C0DC;
+    }
+
+    .BI{
+      background-color: #1378D5;
+    }
+  }
+}

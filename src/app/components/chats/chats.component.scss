@@ -1,0 +1,50 @@
+.btn-ticket{
+    
+    margin-top: 10px;
+    padding: 18px;
+    font-size: 1.15rem;
+    
+    &#todos{
+        color: #ffffff;
+        background-color: #278FEA;
+        border-color: #278FEA;
+        
+        &:hover, &:focus, &:active, &.active{
+            color: #ffffff;
+            background-color: #1c7bce;
+            border-color: #1c7bce;
+        }
+    }
+    &#convertidos{
+        color: #ffffff;
+        background-color: #5C5788;
+        border-color: #5C5788;
+        
+        &:hover, &:focus, &:active, &.active{
+            color: #ffffff;
+            background-color: #494575;
+            border-color: #494575;
+        }
+    }
+    &#resueltos{
+        color: #ffffff;
+        background-color: #50C9C5;
+        border-color: #50C9C5;
+        
+        &:hover, &:focus, &:active, &.active{
+            color: #ffffff;
+            background-color: #39bab3;
+            border-color: #39bab3;
+        }
+    }
+}
+
+a{
+    color: #fff !important;
+    cursor: pointer;
+}
+
+.breadcrumb-item a {
+  color: #1D93EB !important;
+  text-decoration: none;
+}

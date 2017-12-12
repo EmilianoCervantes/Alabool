@@ -1,0 +1,60 @@
+<!--
+<div class="row">
+<div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+<form (ngSubmit)="onSignin(f)" #f="ngForm">
+<div class="form-group row">
+<label for="email-input" class="col-2 col-form-label">Usuario</label>
+<div class="col-10">
+<input class="form-control" type="email" value="tucorreo@example.com" id="email-input" name="email" ngModel>
+</div>
+</div>
+<div class="form-group row">
+<label for="password-input" class="col-2 col-form-label">Contraseña</label>
+<div class="col-10">
+<input class="form-control" type="password" value="hunter2" id="password-input" name="password" ngModel>
+</div>
+</div>
+<button type="submit" class="btn btn-primary" [disabled]="!f.valid">Ingresar</button>
+</form>
+</div>
+</div>
+-->
+<div class="page login-page">
+  <div class="container d-flex align-items-center">
+    <div class="form-holder has-shadow">
+      <div class="row">
+        <!-- Logo & Information Panel-->
+        <div class="col-lg-6">
+          <div class="info d-flex align-items-center border-rad-left">
+            <div class="content">
+              <div class="logo">
+                <h1>Dashboard</h1>
+              </div>
+              <p>Portal de administración de tickets, chats, base de conocimientos y agentes.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Form Panel    -->
+        <div class="col-lg-6 bg-white">
+          <div class="form d-flex align-items-center">
+            <div class="content">
+              <form id="login-form" (ngSubmit)="onSignin(f)" #f="ngForm">
+                <div class="form-group">
+                  <label for="email-input" class="label-material">Correo electrónico</label>
+                  <input class="form-control" type="email" value="tucorreo@example.com" id="email-input" name="email" ngModel>
+                </div>
+                <div class="form-group">
+                  <label for="password-input" class="label-material">Contraseña</label>
+                  <input class="form-control" type="password" value="hunter2" id="password-input" name="password" ngModel>
+                </div>
+                <button type="submit" class="btn btn-primary" [disabled]="!f.valid">Ingresar</button>
+                <!-- This should be submit button but I replaced it with <a> for demo purposes-->
+              </form>
+              <!-- <a href="#" class="forgot-pass">¿Olvidaste tu constraseña?</a><br><small>¿No tienes una cuenta? </small><a href="register.html" class="signup">Únete</a>-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

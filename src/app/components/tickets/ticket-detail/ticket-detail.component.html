@@ -1,0 +1,63 @@
+<div class="detail-ticket">
+  <div class="row">
+    <div class="col-12">
+      <div class="card card-ticket">
+        <div class="card-header d-flex align-items-center">
+          <h3 class="h4">Ticket #{{ticket.id}}</h3>
+          <!-- Dropdown button -->
+          <div class="btn-group">
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Acciones
+            </button>
+            <div class="dropdown-menu dropdown-menu-right">
+              <a class="dropdown-item" (click)="onEditTicket()">Editar</a>
+              <a class="dropdown-item" (click)="onAddComment()">Comentar</a>
+              <a class="dropdown-item">Marcar</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" (click)="onDeleteTicket()">Eliminar</a>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <p class="title">{{ticket.title}}</p>
+          <p class="description">{{ticket.description}}</p>
+          <p>
+            estatus: <span class="back alta">alta</span>
+            prioridad: <span class="back medio">medio</span>
+          </p>
+          <p>producto(s):
+            <!-- Products iteration -->
+            <span class="back ERP">ERP</span>
+            <!-- Products iteracion end -->
+          </p>
+          <p class="title text-left">Fechas:</p>
+          <hr>
+          <p class="text-min"><b>apertura:</b> 17-10-17</p>
+          <p class="text-min"><b>cierre:</b> 18-10-17</p>
+          <p class="title text-left">Cliente:</p>
+          <hr>
+          <p class="text-min"><b>{{ticket.company}} Tijuana</b></p>
+          <p class="text-min">{{ticket.client_name}} <span class="italic">&#60; {{ticket.client_email}} &#62;</span></p>
+          <p class="text-min"> {{ticket.client_phone}} </p>
+          <p class="title text-left">Responsable:</p>
+          <hr>
+          <p class="">{{ticket.responsable_name}} &#60; {{ticket.responsable_email}} &#62;</p>
+          <p class="title text-left">Comentarios</p>
+          <hr>
+          <!-- Comments iteration -->
+          <div *ngFor="let comment of ticket.comments">
+            <p class="author">{{comment.name}}:</p>
+            <p class="text-left">{{comment.message}}<br><small>{{comment.created}}</small></p>
+            <!-- Comments iteration end -->
+          </div>
+          <p class="title text-left">Archivos</p>
+          <hr>
+          <!-- Files iteration -->
+          <div class="time file">
+            <div class="text-text"><span class="img"></span><a href="#">archivo.docx</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
